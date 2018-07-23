@@ -1,0 +1,26 @@
+page-to-view {
+  .scroll-content {
+    background-color: #6747cd;
+  }
+  .list-md,
+  .list-ios {
+    margin-top: 15px;
+  }
+  ion-tabs.hidden div.tabbar {
+    display: none;
+  }
+  .item-md,
+  .item-ios {
+    background-color: #6747cd;
+    h2 {
+      color: #a68fef;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+    p {
+      color: #d4ccf0;
+      font-size: 1.7rem;
+      font-weight: 500;
+    }
+  }
+}

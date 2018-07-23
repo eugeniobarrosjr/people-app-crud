@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title>
+      Perfil
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="missing_button"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-item>
+      <h2>Nome:</h2>
+      <p>{{item.people.name}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Data Nascimento:</h2>
+      <p>{{item.people.date | date: 'dd/MM/yyyy'}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Sexo:</h2>
+      <p>{{item.people.sex}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>CPF:</h2>
+      <p>{{item.people.cpf}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Telefone:</h2>
+      <p>{{item.people.phone}}</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <ion-row>
+      <ion-col>
+        <button (click)="editHandle(item)" class="edit-button" color="secondary" ion-fab>
+          <ion-icon name="md-document"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)="removeHandle(item)" color="danger" ion-fab>
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-fab>
+
+  <ion-tabs></ion-tabs>
+
+</ion-content>

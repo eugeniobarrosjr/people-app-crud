@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +13,73 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// APP Background
+.scroll-content {
+  background-color: color($colors, light);
+}
+
+ion-fab[bottom] {
+  bottom: 25px !important;
+}
+
+.tab-highlight {
+  bottom: 0 !important;
+}
+
+.ion-ios-woman:before,
+.ion-md-woman:before {
+  content: '\f271';
+  color: #a29cd5;
+}
+
+.ion-md-arrow-back:before {
+  color: #fff;
+}
+.invisibleButton {
+  height: 10px;
+  width: 40px;
+}
+
+.toolbar-background-md {
+  background-color: color($colors, primary);
+}
+
+.toolbar-title-ios,
+.toolbar-title-md {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.toolbar-title-md {
+  color: #fff !important;
+}
+
+.item-title,
+.toolbar-title-ios {
+  color: color($colors, dark);
+}
+
+.tabs-ios[tabsHighlight='true'] .tab-highlight {
+  left: 0;
+  bottom: 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 2px;
+  background: color($colors, primary);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.tabs-ios[tabsHighlight='true'] .tab-highlight.animate {
+  transition-duration: 300ms;
+}
+
+.tabs-ios[tabsHighlight='true'][tabsPlacement='bottom']
+  > .tabbar
+  > .tab-highlight {
+  top: 0;
+}

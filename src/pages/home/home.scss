@@ -1,3 +1,30 @@
 page-home {
+  .list-ios[inset],
+  .list-md[inset] {
+    border-bottom: 1px solid #c8c7cc;
+  }
+  .list-md[inset] .item {
+    border-bottom: 1px solid rgb(200, 199, 204);
+  }
+  .list-md .item-block .item-inner {
+    border: none;
+  }
+  .item-md,
+  .item-ios {
+    color: color($colors, dark) !important;
+    padding-left: 0;
+    background-color: color($colors, light);
+  }
+  .item-inner {
+    margin-left: 0 !important;
+  }
 
+  .item-md p,
+  ion-label {
+    color: #858585;
+  }
+
+  ion-label {
+    font-size: 1.5rem;
+  }
 }

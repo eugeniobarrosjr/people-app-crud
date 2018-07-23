@@ -1,0 +1,20 @@
+page-about {
+  .about-header {
+    background-color: #dcdde1;
+    padding: 16px;
+    width: 100%;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .about-info h4 {
+    text-align: center;
+    color: color($colors, dark);
+    font-size: 1.6rem;
+  }
+
+  .about-info p {
+    color: #858585;
+    text-align: justify;
+  }
+}

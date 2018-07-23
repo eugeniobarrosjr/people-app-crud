@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title>
+      {{this.navParams.data.people ? 'Editar' : 'Adicionar'}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="missing_button"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-item-divider sticky>
+    <ion-label>
+      {{this.navParams.data.people ? 'Editar Contato' : 'Novo Cadastro'}}
+    </ion-label>
+  </ion-item-divider>
+  <form [formGroup]="peopleForm" (ngSubmit)="onSubmit()">
+
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <ion-input [(ngModel)]="people.name" formControlName="name" autocomplete="on" autocorrect=“on” type="text" name="name" required=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data de Nascimento:</ion-label>
+      <ion-datetime [(ngModel)]="people.date" formControlName="date" displayFormat="DD/MM/YYYY" name="date" required="" doneText="Ok"
+        cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sexo:</ion-label>
+      <ion-select [(ngModel)]="people.sex" formControlName="sex" name="sex" required="" cancelText="Cancelar">
+        <ion-option value="Masculino">Masculino</ion-option>
+        <ion-option value="Feminino">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>CPF:</ion-label>
+      <ion-input [(ngModel)]="people.cpf" formControlName="cpf" autocomplete="on" autocorrect=“on” type="text" name="cpf" [brmasker]="{mask:'000.000.000-00', len:14, type:'num'}"
+        required=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefone:</ion-label>
+      <ion-input [(ngModel)]="people.phone" formControlName="phone" autocomplete="on" autocorrect=“on” type="text" name="phone"
+        [brmasker]="{phone: true}" required=""></ion-input>
+    </ion-item>
+    <div class="button-container">
+      <button [disabled]="!peopleForm.valid" ion-button round icon-start>
+        <ion-icon name="md-archive"></ion-icon>
+        Salvar Cadastro
+      </button>
+    </div>
+
+  </form>
+
+</ion-content>

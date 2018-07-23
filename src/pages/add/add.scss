@@ -1,0 +1,40 @@
+page-add {
+  .ion-md-arrow-back:before {
+    color: #fff;
+  }
+  .invisibleButton {
+    height: 10px;
+    width: 40px;
+  }
+  .item-md,
+  .item-ios {
+    color: color($colors, dark) !important;
+    background-color: color($colors, light);
+    margin-top: 10px;
+  }
+
+  .item-md p,
+  ion-label {
+    color: #858585;
+  }
+
+  ion-label {
+    font-size: 1.5rem;
+  }
+
+  .item-divider {
+    margin-top: 15px;
+  }
+
+  .item-divider-ios {
+    border-bottom: 1px solid #c8c7cc;
+  }
+
+  .button-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}

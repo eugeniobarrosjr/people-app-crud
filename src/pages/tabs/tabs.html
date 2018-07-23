@@ -1,0 +1,9 @@
+<ion-tabs tabsHighlight="true" tabsHideOnSubPages="true">
+  <ion-fab (click)="addPerson()" bottom center>
+    <button ion-fab>
+      <ion-icon name="md-person-add"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-tab [root]="tab1Root" tabLayout="icon-end" tabTitle="Lista" tabIcon="ios-list"></ion-tab>
+  <ion-tab [root]="tab2Root" tabLayout="icon-start" tabTitle="Sobre" tabIcon="md-information-circle"></ion-tab>
+</ion-tabs>
