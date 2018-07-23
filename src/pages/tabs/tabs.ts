@@ -12,12 +12,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = AboutPage;
 
-  constructor(public navCtrl: NavController) {
-    console.log(navCtrl.canGoBack());
-    console.log(navCtrl.canSwipeBack());
-    console.log(navCtrl.getType());
-    console.log(navCtrl.getActive());
-  }
+  constructor(public navCtrl: NavController) {}
 
   addPerson() {
     this.navCtrl.push(AddPage);

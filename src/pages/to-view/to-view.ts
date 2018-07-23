@@ -25,7 +25,6 @@ export class ToViewPage {
     private _toastCtrl: ToastController
   ) {
     this.item = { key: navParams.get('key'), people: navParams.get('people') };
-    console.log(this.item.people.date);
   }
 
   editHandle(item: PeopleList) {
@@ -54,7 +53,6 @@ export class ToViewPage {
           text: 'Cancelar',
           role: 'cancel',
           handler: () => {
-            console.log('Cancel clicked');
           }
         },
         {

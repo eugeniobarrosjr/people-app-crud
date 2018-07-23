@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 
 import { People } from '../../model/people';
 import { PersonProvider } from '../../provider/person.provider/person.provider';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { TabsPage } from '../tabs/tabs';
 
 @Component({
@@ -47,14 +47,12 @@ export class AddPage {
     this._savePeople()
       .then(res => {
         this._presentToast('Salvo com sucesso');
-        console.log(res);
         setTimeout(() => {
           this.navCtrl.setRoot(TabsPage);
         }, 2000);
       })
       .catch(error => {
         this._presentToast('Erro ao salvar');
-        console.log(error);
       });
   }
 

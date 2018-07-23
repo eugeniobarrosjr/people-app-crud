@@ -45,16 +45,6 @@ ion-fab[bottom] {
   background-color: color($colors, primary);
 }
 
-.toolbar-title-ios,
-.toolbar-title-md {
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.toolbar-title-md {
-  color: #fff !important;
-}
-
 .item-title,
 .toolbar-title-ios {
   color: color($colors, dark);
@@ -82,4 +72,14 @@ ion-fab[bottom] {
   > .tabbar
   > .tab-highlight {
   top: 0;
+}
+
+.toolbar-title-ios,
+.toolbar-title-md {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.toolbar-title-md {
+  color: #fff !important;
 }
